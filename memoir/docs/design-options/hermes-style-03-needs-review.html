@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Needs review, Hermes style</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{min-height:900px;background-color:#0000f2;background-image:linear-gradient(#ffffff14 1px,transparent 1px),linear-gradient(90deg,#ffffff14 1px,transparent 1px);background-size:48px 48px;color:#fff;font-size:15px;padding:0 48px 48px;box-sizing:border-box;position:relative;overflow:hidden}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.m{color:#ffffffc4}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #ffffff59}
+.logo{font-weight:800;font-size:24px;letter-spacing:-.02em}
+.nav{display:flex;gap:6px}
+.nv{padding:10px 14px;border:1px solid transparent;transition:.3s}
+.nv:hover{border-color:#ffffff99}
+.nv.on{background:#fff;color:#0000f2}
+.btn{padding:14px 22px;border:1px solid #fff;transition:.3s}
+.btn:hover{background:#fff;color:#0000f2}
+.pri{background:#f4efe2;color:#0000f2;border-color:#f4efe2}
+.pri:hover{background:transparent;color:#f4efe2}
+h1{font-weight:800;font-size:96px;line-height:.92;letter-spacing:-.04em;margin:0}
+.card{border:1px solid #ffffff73;background:#00009acc}
+.chip{padding:7px 12px;border:1px solid #ffffff73;transition:.3s}
+.chip:hover,.chip.on{background:#fff;color:#0000f2;border-color:#fff}
+.fld{background:transparent;border:1px solid #ffffff73;color:#fff;padding:10px 14px;font:inherit}
+.fld::placeholder{color:#ffffffb8}
+input[type=checkbox]{accent-color:#f4efe2}
+.t{aspect-ratio:1;position:relative;border:1px solid #ffffff59;overflow:hidden;transition:.4s}
+.t:hover{border-color:#fff;transform:translateY(-4px)}
+.t i{position:absolute;left:6px;bottom:6px;font-style:normal;padding:3px 7px;background:#0000f2;color:#fff;font-size:10px}
+.t b{position:absolute;right:6px;top:6px;padding:3px 7px;background:#ffb199;color:#0000f2;font-size:10px}
+.d1{background:linear-gradient(135deg,#0000b8,#8c8cff)}
+.d2{background:linear-gradient(135deg,#f4efe2,#ffb199)}
+.d3{background:linear-gradient(135deg,#5a5aff,#f4efe2)}
+.d4{background:linear-gradient(135deg,#00007a,#5a5aff)}
+.d5{background:linear-gradient(135deg,#ffb199,#8c8cff)}
+.d6{background:linear-gradient(135deg,#b9b9ff,#00009a)}
+.row{display:flex;gap:12px;padding:14px 4px;border-top:1px solid #ffffff40}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes blink{50%{opacity:0}}
+@keyframes pulse{50%{opacity:.3}}
+.app>*{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.app>:nth-child(2){animation-delay:.08s}.app>:nth-child(3){animation-delay:.16s}.app>:nth-child(4){animation-delay:.24s}.app>:nth-child(5){animation-delay:.32s}.app>:nth-child(6){animation-delay:.4s}
+.cur{display:inline-block;width:9px;height:18px;background:#f4efe2;margin-left:4px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+.spin{animation:spin 60s linear infinite;transform-box:fill-box;transform-origin:center}
+.spin2{animation:spin 90s linear infinite reverse;transform-box:fill-box;transform-origin:center}
+.sg{flex:1;height:22px;border:1px solid #fff}
+.ok{background:#f4efe2}.go{background:#fff;animation:pulse 1.2s infinite}.miss{background:repeating-linear-gradient(45deg,#ffb199 0 4px,transparent 4px 8px);border-color:#ffb199}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<div class="app">
+<header class="bar"><div class="logo">◐ Memoir</div><nav class="nav"><button type="button" class="nv mono">Upload</button><button type="button" class="nv mono">Timeline</button><button type="button" class="nv mono on">Review 73</button><button type="button" class="nv mono">Duplicates 184</button></nav><button type="button" class="btn pri mono">Export</button></header>
+<section style="padding:40px 0 24px"><div class="mono m">// 03 Attention</div><h1 style="font-size:80px;margin-top:14px">Needs Review</h1></section>
+<div style="display:flex;gap:24px;align-items:flex-start">
+<aside class="card" style="width:330px;flex:none;padding:18px"><div class="mono" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px"><span class="chip on">All 73</span><span class="chip">Missing</span><span class="chip">Mismatch</span><span class="chip">Corrupt</span></div><label class="row"><input type="checkbox" aria-label="Select IMG-20230514-WA0031.jpg" checked><span><b style="font-weight:700">IMG-20230514-WA0031.jpg</b><br><span class="mono m" style="font-size:11px">No embedded date</span></span></label><label class="row"><input type="checkbox" aria-label="Select 00231.mkv"><span><b style="font-weight:700">00231.mkv</b><br><span class="mono m" style="font-size:11px">EXIF and JSON differ</span></span></label><label class="row"><input type="checkbox" aria-label="Select DSC0412.NEF" checked><span><b style="font-weight:700">DSC0412.NEF</b><br><span class="mono m" style="font-size:11px">Placeholder date 1970</span></span></label><label class="row"><input type="checkbox" aria-label="Select VID-20230601-WA0009.mp4"><span><b style="font-weight:700">VID-20230601-WA0009.mp4</b><br><span class="mono m" style="font-size:11px">Forward date</span></span></label><button type="button" class="btn pri mono" style="margin-top:14px;width:100%">Batch edit (2 selected)</button></aside>
+<section class="card" style="flex:1;min-width:0;padding:28px">
+<div style="font-weight:800;font-size:34px;letter-spacing:-.02em;margin-bottom:22px;overflow-wrap:anywhere">IMG-20230514-WA0031.jpg</div>
+<div style="display:flex;gap:28px;margin-bottom:26px"><div class="d3" style="width:340px;height:230px;flex:none;border:1px solid #fff;position:relative"><span class="mono" style="position:absolute;left:10px;bottom:10px;background:#0000f2;padding:4px 8px;font-size:10px">Preview // in memory only</span></div>
+<div><div class="mono">Clues</div><div class="m" style="margin:12px 0 6px">Filename suggests 14 May 2023</div><div class="m">Folder: Goa trip</div><div style="display:flex;gap:8px;margin-top:16px"><div class="t d2" style="width:44px"></div><div class="t d5" style="width:44px"></div><div class="t d3" style="width:44px;outline:2px solid #f4efe2;outline-offset:3px"></div><div class="t d4" style="width:44px"></div></div></div></div>
+<table style="width:100%;border-collapse:collapse;text-align:left;margin-bottom:24px"><tr class="mono m"><th style="padding:10px 0;font-weight:400">Source</th><th style="font-weight:400">Value</th><th style="font-weight:400">Offset</th><th></th></tr>
+<tr style="border-top:1px solid #ffffff40"><td style="padding:14px 0">EXIF</td><td class="m">none</td><td class="m">-</td><td></td></tr>
+<tr style="border-top:1px solid #ffffff40"><td style="padding:14px 0">Sidecar JSON</td><td>14 May 2023, 11:02</td><td class="m">UTC</td><td><button type="button" class="chip mono">Use</button></td></tr>
+<tr style="border-top:1px solid #ffffff40"><td style="padding:14px 0">Filename</td><td>14 May 2023, time unknown</td><td class="m">-</td><td><button type="button" class="chip mono">Use</button></td></tr></table>
+<div class="mono" style="display:flex;gap:12px;margin-bottom:24px"><input class="fld" aria-label="Date" value="14/05/2023" style="width:130px"><input class="fld" aria-label="Time" value="11:02:00" style="width:110px"><input class="fld" aria-label="Timezone offset" value="UTC+05:30" style="width:130px"></div>
+<div style="display:flex;gap:12px"><button type="button" class="btn pri mono">Apply</button><button type="button" class="btn mono">Skip</button><button type="button" class="btn mono">Undo</button></div></section></div>
+</div>
+
+</body>
+</html>

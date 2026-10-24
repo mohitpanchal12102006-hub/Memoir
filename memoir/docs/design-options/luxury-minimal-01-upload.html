@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Upload, luxury</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Jost,system-ui,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{min-height:900px;background:#111110;color:#ece8df;font-size:14px;padding:0 64px 56px;box-sizing:border-box}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:30px 0;border-bottom:1px solid #2a2926}
+.logo{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;letter-spacing:.04em}
+.nav{display:flex;gap:40px}
+.nv{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9b968c;padding:6px 0;border-bottom:1px solid transparent}
+.nv.on{color:#ece8df;border-bottom-color:#c8b07a}
+.serif{font-family:'Cormorant Garamond',serif}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:68px;line-height:1;margin:48px 0 10px;letter-spacing:-.01em}
+.eye{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#c8b07a}
+.m{color:#9b968c}
+.hr{border-top:1px solid #2a2926}
+.btn{font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:14px 28px;border:1px solid #4a4740}
+.pri{background:#c8b07a;color:#111110;border-color:#c8b07a}
+.chip{font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:7px 14px;border:1px solid #2a2926;color:#9b968c}
+.chip.on{color:#ece8df;border-color:#c8b07a}
+.fld{background:none;border:0;border-bottom:1px solid #4a4740;color:#ece8df;font:inherit;padding:8px 2px}
+.t{position:relative;aspect-ratio:3/4}
+.t i{position:absolute;left:8px;bottom:8px;font-style:normal;font-size:10px;letter-spacing:.16em;padding:3px 7px;background:#111110cc}
+.t b{position:absolute;right:8px;top:8px;font-size:10px;letter-spacing:.16em;padding:3px 7px;background:#111110;color:#c8b07a}
+.q1{background:linear-gradient(160deg,#2c3540,#4a5766)}
+.q2{background:linear-gradient(160deg,#3a3028,#6b5844)}
+.q3{background:linear-gradient(160deg,#26352f,#47634f)}
+.q4{background:linear-gradient(160deg,#322b3a,#58496b)}
+.q5{background:linear-gradient(160deg,#3b2b2b,#6b4a4a)}
+.q6{background:linear-gradient(160deg,#2d3330,#55605a)}
+input[type=checkbox]{accent-color:#c8b07a}
+.app{position:relative;overflow:hidden}
+.app::before{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.app::after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;background:radial-gradient(ellipse at center,transparent 60%,#0009 100%)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes sway{0%,100%{transform:scale(1.04) translateX(0)}50%{transform:scale(1.1) translateX(-2%)}}
+@keyframes drift{from{transform:translateX(-8%)}to{transform:translateX(8%)}}
+@keyframes glow{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes shim{from{background-position:0 0}to{background-position:200% 0}}
+@keyframes grow{from{width:0}to{width:80%}}
+@keyframes bird{from{transform:translate(-40px,24px)}to{transform:translate(560px,-34px)}}
+.app>*{animation:up 1s cubic-bezier(.2,.7,.2,1) both}
+.app>:nth-child(3){animation-delay:.1s}.app>:nth-child(4){animation-delay:.2s}.app>:nth-child(5){animation-delay:.3s}.app>:nth-child(6){animation-delay:.4s}.app>:nth-child(7){animation-delay:.5s}.app>:nth-child(8){animation-delay:.6s}
+.t{overflow:hidden;transition:transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .7s}
+.t .s{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.t:hover{transform:translateY(-6px);box-shadow:0 22px 44px #000b}
+.t:hover .s{transform:scale(1.14)}
+.t::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,#ffffff2e 50%,transparent 60%);transform:translateX(-110%);transition:transform 1.1s}
+.t:hover::after{transform:translateX(110%)}
+.nv{position:relative;transition:color .4s}
+.nv:hover{color:#ece8df}
+.nv::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#c8b07a;transform:scaleX(0);transition:transform .5s}
+.nv:hover::after,.nv.on::after{transform:scaleX(1)}
+.btn,.chip{transition:all .5s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{background:#c8b07a;color:#111110;border-color:#c8b07a;letter-spacing:.24em}
+.pri:hover{background:transparent;color:#c8b07a}
+.chip:hover{color:#ece8df;border-color:#c8b07a}
+tr.hr:hover{background:#ffffff0a}
+.fill{height:3px;width:80%;background:linear-gradient(90deg,#c8b07a,#f3e4cf,#c8b07a);background-size:200% 100%;animation:grow 2.6s ease-out both,shim 3s linear infinite}
+.rule{height:1px;width:140px;background:#c8b07a;margin:0 0 22px;transform-origin:left;animation:draw 1.6s .7s cubic-bezier(.2,.7,.2,1) both}
+.pan{animation:sway 22s ease-in-out infinite}
+.sun{position:absolute;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,#fff3dcb0,transparent 70%);animation:glow 6s ease-in-out infinite}
+.mist{position:absolute;left:-20%;right:-20%;bottom:18%;height:38%;background:linear-gradient(90deg,transparent,#ffffff44,transparent);filter:blur(16px);animation:drift 15s ease-in-out infinite alternate}
+.bird{position:absolute;left:0;opacity:.85;animation:bird 17s linear infinite}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.s{position:absolute;inset:0;width:100%;height:100%}
+</style>
+
+<div class="app">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="ua" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="uag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9c7b8"/><stop offset="1" stop-color="#8fa3b5"/></linearGradient></defs><rect width="300" height="400" fill="url(#uag)"/><circle cx="210" cy="150" r="34" fill="#f3e4cf" opacity=".9"/><path d="M0 260L70 190L120 240L190 160L300 270V400H0Z" fill="#6d8195" opacity=".55"/><path d="M0 310L90 240L150 290L230 220L300 300V400H0Z" fill="#4d6074" opacity=".8"/><path d="M0 370L100 320L200 360L300 330V400H0Z" fill="#2f3f4f"/><rect y="250" width="300" height="60" fill="#fff" opacity=".12"/></symbol></defs></svg>
+<header class="bar"><div class="logo">Memoir</div><nav class="nav">
+<button type="button" class="nv on">Upload</button>
+<button type="button" class="nv">Timeline</button>
+<button type="button" class="nv">Needs review 73</button>
+<button type="button" class="nv">Duplicates 184</button>
+</nav><button type="button" class="btn">Export</button></header>
+<div style="display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:end;margin:56px 0 52px"><div><div class="eye">01 · Upload</div><h1 style="font-size:84px;margin:28px 0 24px">Keep every moment,<br><i style="font-weight:300">in its place.</i></h1><div class="rule"></div><p class="serif m" style="font-size:24px;font-style:italic;margin:0;max-width:520px">Takeout archives, ZIP parts and folders, read quietly in place. Nothing leaves this device.</p></div><div style="position:relative;height:400px;overflow:hidden"><svg class="s pan" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#ua" width="300" height="400"/></svg><div class="sun" style="left:calc(70% - 70px);top:43px"></div><div class="mist"></div><div class="mist" style="bottom:2%;animation-duration:21s;animation-direction:alternate-reverse"></div><svg class="bird" style="top:70px;animation-delay:0s" width="26" height="10" viewBox="0 0 26 10" aria-hidden="true"><path d="M1 8Q7 0 13 6Q19 0 25 8" fill="none" stroke="#fff" stroke-width="1.2"></path></svg><svg class="bird" style="top:96px;animation-delay:-5s" width="26" height="10" viewBox="0 0 26 10" aria-hidden="true"><path d="M1 8Q7 0 13 6Q19 0 25 8" fill="none" stroke="#fff" stroke-width="1.2"></path></svg><svg class="bird" style="top:54px;animation-delay:-10s" width="26" height="10" viewBox="0 0 26 10" aria-hidden="true"><path d="M1 8Q7 0 13 6Q19 0 25 8" fill="none" stroke="#fff" stroke-width="1.2"></path></svg><div class="serif" style="position:absolute;left:22px;bottom:18px;font-size:20px;font-style:italic;color:#fff">Take your time.</div></div></div>
+<div class="hr"></div>
+<div style="padding:52px 0;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap">
+<div><div class="serif" style="font-size:36px">Drop ZIP parts or folders here</div><div class="m" style="margin-top:10px">JPG, HEIC, RAW, MP4, MOV, MKV and more. Everything stays on this device.</div></div>
+<div style="display:flex;gap:16px"><button type="button" class="btn pri">Choose folder</button><button type="button" class="btn">Choose all ZIP parts</button></div>
+</div>
+<div class="hr"></div>
+<div style="padding:36px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+<div><div class="eye">Takeout set</div><div class="serif" style="font-size:34px;margin:10px 0">15 parts, 214 GB</div><div class="m">Part 009 is missing. Some sidecars may stay unmatched until it is added.</div></div>
+<div><div class="eye">Indexing ZIP directories</div><div class="serif" style="font-size:34px;margin:10px 0">Step 1 of 5, part 12 of 15</div><div style="height:2px;background:#2a2926"><div class="fill"></div></div><div class="m" style="margin-top:14px">Extracted to disk: 0 GB, 380 MB/s, about 9 min left</div></div>
+</div>
+<div class="hr"></div>
+<div style="padding:36px 0;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+<div style="display:flex;gap:56px"><div><div class="serif" style="font-size:44px;font-weight:300">8,120</div><div class="eye m">Images</div></div><div><div class="serif" style="font-size:44px;font-weight:300">340</div><div class="eye m">RAW</div></div><div><div class="serif" style="font-size:44px;font-weight:300">951</div><div class="eye m">Video</div></div><div><div class="serif" style="font-size:44px;font-weight:300">12</div><div class="eye m">Other</div></div></div>
+<div style="display:flex;gap:16px"><button type="button" class="btn">Pause</button><button type="button" class="btn pri">Open timeline</button></div>
+</div>
+</div>
+
+</body>
+</html>

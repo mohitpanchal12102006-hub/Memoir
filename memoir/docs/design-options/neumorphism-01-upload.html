@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Upload</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Manrope,system-ui,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{display:flex;min-height:800px;background:#e0e5ec;color:#2d3748;font-size:15px}
+.side{width:220px;flex:none;padding:28px 20px;display:flex;flex-direction:column;gap:12px}
+.logo{font-weight:800;font-size:24px;padding:0 10px 16px}
+.nav{display:flex;justify-content:space-between;padding:14px 16px;border-radius:16px;font-weight:600}
+.on{box-shadow:inset 5px 5px 10px #a3b1c6,inset -5px -5px 10px #fff;color:#2a49b8}
+.main{flex:1;min-width:0;padding:28px 32px;display:flex;flex-direction:column;gap:22px}
+.top{display:flex;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:28px;font-weight:800}
+.r{border-radius:20px;box-shadow:8px 8px 16px #a3b1c6,-8px -8px 16px #fff}
+.i{border-radius:20px;box-shadow:inset 6px 6px 12px #a3b1c6,inset -6px -6px 12px #fff}
+.btn{padding:12px 22px;border-radius:14px;font-weight:700;box-shadow:5px 5px 10px #a3b1c6,-5px -5px 10px #fff}
+.pri{color:#2a49b8}
+.m{color:#586577}
+.chip{padding:8px 14px;border-radius:12px;font-weight:600;font-size:13px;box-shadow:3px 3px 6px #a3b1c6,-3px -3px 6px #fff}
+.chip.on{box-shadow:inset 3px 3px 6px #a3b1c6,inset -3px -3px 6px #fff}
+.t{position:relative;aspect-ratio:1;border-radius:14px}
+.t i{position:absolute;left:8px;bottom:8px;font-style:normal;font-size:11px;font-weight:700;padding:3px 8px;border-radius:8px;background:#e0e5ec}
+.t b{position:absolute;right:8px;top:8px;font-size:11px;padding:3px 8px;border-radius:8px;background:#b03a2e;color:#fff}
+.p1{background:linear-gradient(135deg,#8fa6bd,#c6d3e0)}
+.p2{background:linear-gradient(135deg,#b7a99a,#e0d3c4)}
+.p3{background:linear-gradient(135deg,#8db3a6,#cfe3da)}
+.p4{background:linear-gradient(135deg,#a79bb8,#d9d0e6)}
+.p5{background:linear-gradient(135deg,#b8a0a0,#e6d2d2)}
+.p6{background:linear-gradient(135deg,#9aa7a0,#d3dcd7)}
+.field{border:0;background:#e0e5ec;font:inherit;color:inherit;padding:12px 16px;border-radius:14px;box-shadow:inset 4px 4px 8px #a3b1c6,inset -4px -4px 8px #fff}
+</style>
+
+<div class="app">
+<nav class="side"><div class="logo">Memoir</div>
+<button type="button" class="nav on">Upload</button>
+<button type="button" class="nav">Timeline</button>
+<button type="button" class="nav">Needs Review<b>73</b></button>
+<button type="button" class="nav">Duplicates<b>184</b></button>
+</nav>
+<main class="main">
+<div class="top"><h1>Upload</h1><button type="button" class="btn pri">Export</button></div>
+<div class="i" style="padding:56px 24px;text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center">
+<div style="font-size:22px;font-weight:800">Drop ZIPs, Takeout archives or folders</div>
+<div class="m">JPG, HEIC, RAW, MP4, MOV, MKV and more. Everything is processed on this device.</div>
+<div style="display:flex;gap:16px;margin-top:10px"><button type="button" class="btn pri">Choose folder</button><button type="button" class="btn">Choose all ZIP parts</button></div>
+</div>
+<div class="r" style="padding:24px;display:flex;flex-direction:column;gap:20px">
+<div style="font-weight:800;font-size:18px">Takeout set: 15 ZIP parts found, 214 GB</div><div class="m">Part 009 is missing. Some JSON sidecars may stay unmatched until you add it. Parts are read in place, nothing is extracted to disk.</div>
+<div style="display:grid;grid-template-columns:1fr 90px 280px 50px;gap:18px;align-items:center"><span>takeout-001.zip</span><span class="m">48.2 GB</span><div class="i" style="height:16px;padding:3px;border-radius:10px"><div style="width:81%;height:100%;border-radius:8px;background:#2a49b8"></div></div><b>81%</b></div>
+<div style="display:grid;grid-template-columns:1fr 90px 280px 50px;gap:18px;align-items:center"><span>DCIM/</span><span class="m">12.4 GB</span><div class="i" style="height:16px;padding:3px;border-radius:10px"><div style="width:100%;height:100%;border-radius:8px;background:#276749"></div></div><b>Done</b></div>
+</div>
+<div class="r" style="padding:24px;display:flex;flex-direction:column;gap:16px">
+<div style="font-weight:800;font-size:18px">Indexing ZIP directories (step 1 of 5), part 12 of 15</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><span class="chip on">Images 8,120</span><span class="chip on">RAW 340</span><span class="chip on">Video 951</span><span class="chip on">Other 12</span><span class="chip on">Extracted to disk: 0 GB</span><span class="chip on">Resume point saved</span><span class="chip on">380 MB/s, about 9 min left</span></div>
+<div style="display:flex;justify-content:flex-end;gap:16px"><button type="button" class="btn">Pause</button><button type="button" class="btn pri">Open Timeline</button></div>
+</div>
+</main>
+</div>
+
+</body>
+</html>

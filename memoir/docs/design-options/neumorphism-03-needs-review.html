@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Needs Review</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Manrope,system-ui,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{display:flex;min-height:800px;background:#e0e5ec;color:#2d3748;font-size:15px}
+.side{width:220px;flex:none;padding:28px 20px;display:flex;flex-direction:column;gap:12px}
+.logo{font-weight:800;font-size:24px;padding:0 10px 16px}
+.nav{display:flex;justify-content:space-between;padding:14px 16px;border-radius:16px;font-weight:600}
+.on{box-shadow:inset 5px 5px 10px #a3b1c6,inset -5px -5px 10px #fff;color:#2a49b8}
+.main{flex:1;min-width:0;padding:28px 32px;display:flex;flex-direction:column;gap:22px}
+.top{display:flex;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:28px;font-weight:800}
+.r{border-radius:20px;box-shadow:8px 8px 16px #a3b1c6,-8px -8px 16px #fff}
+.i{border-radius:20px;box-shadow:inset 6px 6px 12px #a3b1c6,inset -6px -6px 12px #fff}
+.btn{padding:12px 22px;border-radius:14px;font-weight:700;box-shadow:5px 5px 10px #a3b1c6,-5px -5px 10px #fff}
+.pri{color:#2a49b8}
+.m{color:#586577}
+.chip{padding:8px 14px;border-radius:12px;font-weight:600;font-size:13px;box-shadow:3px 3px 6px #a3b1c6,-3px -3px 6px #fff}
+.chip.on{box-shadow:inset 3px 3px 6px #a3b1c6,inset -3px -3px 6px #fff}
+.t{position:relative;aspect-ratio:1;border-radius:14px}
+.t i{position:absolute;left:8px;bottom:8px;font-style:normal;font-size:11px;font-weight:700;padding:3px 8px;border-radius:8px;background:#e0e5ec}
+.t b{position:absolute;right:8px;top:8px;font-size:11px;padding:3px 8px;border-radius:8px;background:#b03a2e;color:#fff}
+.p1{background:linear-gradient(135deg,#8fa6bd,#c6d3e0)}
+.p2{background:linear-gradient(135deg,#b7a99a,#e0d3c4)}
+.p3{background:linear-gradient(135deg,#8db3a6,#cfe3da)}
+.p4{background:linear-gradient(135deg,#a79bb8,#d9d0e6)}
+.p5{background:linear-gradient(135deg,#b8a0a0,#e6d2d2)}
+.p6{background:linear-gradient(135deg,#9aa7a0,#d3dcd7)}
+.field{border:0;background:#e0e5ec;font:inherit;color:inherit;padding:12px 16px;border-radius:14px;box-shadow:inset 4px 4px 8px #a3b1c6,inset -4px -4px 8px #fff}
+</style>
+
+<div class="app">
+<nav class="side"><div class="logo">Memoir</div>
+<button type="button" class="nav">Upload</button>
+<button type="button" class="nav">Timeline</button>
+<button type="button" class="nav on">Needs Review<b>73</b></button>
+<button type="button" class="nav">Duplicates<b>184</b></button>
+</nav>
+<main class="main">
+<div class="top"><h1>Needs Review</h1><button type="button" class="btn pri">Export</button></div>
+<div style="display:flex;gap:22px;flex:1">
+<section class="r" style="width:300px;flex:none;padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="chip on">All 73</span><span class="chip">Missing</span><span class="chip">Mismatch</span><span class="chip">Corrupt</span></div>
+<div class="i" style="padding:12px 14px;display:flex;gap:10px;align-items:center"><input type="checkbox" aria-label="Select IMG-20230514-WA0031.jpg" checked><div><b>IMG-20230514-WA0031.jpg</b><div class="m" style="font-size:12px">No embedded date</div></div></div>
+<div style="padding:12px 14px;display:flex;gap:10px;align-items:center"><input type="checkbox" aria-label="Select 00231.mkv"><div><b>00231.mkv</b><div class="m" style="font-size:12px">EXIF and JSON differ</div></div></div>
+<div style="padding:12px 14px;display:flex;gap:10px;align-items:center"><input type="checkbox" aria-label="Select DSC0412.NEF" checked><div><b>DSC0412.NEF</b><div class="m" style="font-size:12px">Placeholder date 1970</div></div></div>
+<div style="padding:12px 14px;display:flex;gap:10px;align-items:center"><input type="checkbox" aria-label="Select VID-20230601-WA0009.mp4"><div><b>VID-20230601-WA0009.mp4</b><div class="m" style="font-size:12px">Forward date</div></div></div>
+<button type="button" class="btn pri" style="margin-top:auto">Batch edit (2 selected)</button>
+</section>
+<section class="r" style="flex:1;min-width:0;padding:26px;display:flex;flex-direction:column;gap:20px">
+<div style="font-size:20px;font-weight:800">IMG-20230514-WA0031.jpg</div>
+<div style="display:flex;gap:24px">
+<div class="i p1" style="width:340px;height:230px;flex:none;display:flex;align-items:flex-end;padding:14px;box-sizing:border-box"><span class="chip" style="background:#e0e5ec">Preview (in memory only)</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><b>Clues</b><span class="m">Filename suggests 14 May 2023</span><span class="m">Folder: Goa trip</span><span class="m">Neighbors in batch:</span>
+<div style="display:flex;gap:8px"><div class="t p2" style="width:48px"></div><div class="t p3" style="width:48px"></div><div class="t p1" style="width:48px;outline:3px solid #2a49b8"></div><div class="t p4" style="width:48px"></div></div></div>
+</div>
+<div class="i" style="padding:14px 18px"><table style="width:100%;border-collapse:collapse;text-align:left"><tr class="m"><th style="padding:8px">Source</th><th>Value</th><th>Offset</th><th></th></tr>
+<tr><td style="padding:8px">EXIF</td><td>none</td><td>-</td><td></td></tr>
+<tr><td style="padding:8px">Sidecar JSON</td><td>14 May 2023, 11:02</td><td>UTC</td><td><button type="button" class="chip pri">Use</button></td></tr>
+<tr><td style="padding:8px">Filename</td><td>14 May 2023, time unknown</td><td>-</td><td><button type="button" class="chip pri">Use</button></td></tr></table></div>
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><input class="field" aria-label="Date" value="14/05/2023" style="width:130px"><input class="field" aria-label="Time" value="11:02:00" style="width:110px"><input class="field" aria-label="Timezone offset" value="UTC+05:30" style="width:130px"></div>
+<div style="display:flex;gap:16px"><button type="button" class="btn pri">Apply</button><button type="button" class="btn">Skip</button><button type="button" class="btn">Undo</button></div>
+</section>
+</div>
+</main>
+</div>
+
+</body>
+</html>

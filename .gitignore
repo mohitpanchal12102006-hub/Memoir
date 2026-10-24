@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+*.db
+*.db-shm
+*.db-wal
+.memoir/
+__pycache__/
+.vscode/
+dist/
+build/

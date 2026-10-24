@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Timeline, luxury</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Jost,system-ui,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{min-height:900px;background:#111110;color:#ece8df;font-size:14px;padding:0 64px 56px;box-sizing:border-box}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:30px 0;border-bottom:1px solid #2a2926}
+.logo{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;letter-spacing:.04em}
+.nav{display:flex;gap:40px}
+.nv{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9b968c;padding:6px 0;border-bottom:1px solid transparent}
+.nv.on{color:#ece8df;border-bottom-color:#c8b07a}
+.serif{font-family:'Cormorant Garamond',serif}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:68px;line-height:1;margin:48px 0 10px;letter-spacing:-.01em}
+.eye{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#c8b07a}
+.m{color:#9b968c}
+.hr{border-top:1px solid #2a2926}
+.btn{font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:14px 28px;border:1px solid #4a4740}
+.pri{background:#c8b07a;color:#111110;border-color:#c8b07a}
+.chip{font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:7px 14px;border:1px solid #2a2926;color:#9b968c}
+.chip.on{color:#ece8df;border-color:#c8b07a}
+.fld{background:none;border:0;border-bottom:1px solid #4a4740;color:#ece8df;font:inherit;padding:8px 2px}
+.t{position:relative;aspect-ratio:3/4}
+.t i{position:absolute;left:8px;bottom:8px;font-style:normal;font-size:10px;letter-spacing:.16em;padding:3px 7px;background:#111110cc}
+.t b{position:absolute;right:8px;top:8px;font-size:10px;letter-spacing:.16em;padding:3px 7px;background:#111110;color:#c8b07a}
+.q1{background:linear-gradient(160deg,#2c3540,#4a5766)}
+.q2{background:linear-gradient(160deg,#3a3028,#6b5844)}
+.q3{background:linear-gradient(160deg,#26352f,#47634f)}
+.q4{background:linear-gradient(160deg,#322b3a,#58496b)}
+.q5{background:linear-gradient(160deg,#3b2b2b,#6b4a4a)}
+.q6{background:linear-gradient(160deg,#2d3330,#55605a)}
+input[type=checkbox]{accent-color:#c8b07a}
+.app{position:relative;overflow:hidden}
+.app::before{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.app::after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;background:radial-gradient(ellipse at center,transparent 60%,#0009 100%)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes sway{0%,100%{transform:scale(1.04) translateX(0)}50%{transform:scale(1.1) translateX(-2%)}}
+@keyframes drift{from{transform:translateX(-8%)}to{transform:translateX(8%)}}
+@keyframes glow{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes shim{from{background-position:0 0}to{background-position:200% 0}}
+@keyframes grow{from{width:0}to{width:80%}}
+@keyframes bird{from{transform:translate(-40px,24px)}to{transform:translate(560px,-34px)}}
+.app>*{animation:up 1s cubic-bezier(.2,.7,.2,1) both}
+.app>:nth-child(3){animation-delay:.1s}.app>:nth-child(4){animation-delay:.2s}.app>:nth-child(5){animation-delay:.3s}.app>:nth-child(6){animation-delay:.4s}.app>:nth-child(7){animation-delay:.5s}.app>:nth-child(8){animation-delay:.6s}
+.t{overflow:hidden;transition:transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .7s}
+.t .s{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.t:hover{transform:translateY(-6px);box-shadow:0 22px 44px #000b}
+.t:hover .s{transform:scale(1.14)}
+.t::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,#ffffff2e 50%,transparent 60%);transform:translateX(-110%);transition:transform 1.1s}
+.t:hover::after{transform:translateX(110%)}
+.nv{position:relative;transition:color .4s}
+.nv:hover{color:#ece8df}
+.nv::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#c8b07a;transform:scaleX(0);transition:transform .5s}
+.nv:hover::after,.nv.on::after{transform:scaleX(1)}
+.btn,.chip{transition:all .5s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{background:#c8b07a;color:#111110;border-color:#c8b07a;letter-spacing:.24em}
+.pri:hover{background:transparent;color:#c8b07a}
+.chip:hover{color:#ece8df;border-color:#c8b07a}
+tr.hr:hover{background:#ffffff0a}
+.fill{height:3px;width:80%;background:linear-gradient(90deg,#c8b07a,#f3e4cf,#c8b07a);background-size:200% 100%;animation:grow 2.6s ease-out both,shim 3s linear infinite}
+.rule{height:1px;width:140px;background:#c8b07a;margin:0 0 22px;transform-origin:left;animation:draw 1.6s .7s cubic-bezier(.2,.7,.2,1) both}
+.pan{animation:sway 22s ease-in-out infinite}
+.sun{position:absolute;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,#fff3dcb0,transparent 70%);animation:glow 6s ease-in-out infinite}
+.mist{position:absolute;left:-20%;right:-20%;bottom:18%;height:38%;background:linear-gradient(90deg,transparent,#ffffff44,transparent);filter:blur(16px);animation:drift 15s ease-in-out infinite alternate}
+.bird{position:absolute;left:0;opacity:.85;animation:bird 17s linear infinite}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.s{position:absolute;inset:0;width:100%;height:100%}
+</style>
+
+<div class="app">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="tb" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b7c6d3"/><stop offset="1" stop-color="#ecdcc8"/></linearGradient></defs><rect width="300" height="400" fill="url(#tbg)"/><path d="M0 215L60 170L110 205L170 150L240 200L300 175V215H0Z" fill="#7b8fa0"/><rect y="215" width="300" height="185" fill="#a9b9c4"/><path d="M0 215L60 260L110 225L170 280L240 230L300 255V215Z" fill="#6f8393" opacity=".5"/><path d="M20 300h80M150 330h110M60 360h90" stroke="#fff" stroke-opacity=".35" stroke-width="2"/></symbol><symbol id="td" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tdg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3dfc0"/><stop offset="1" stop-color="#dba776"/></linearGradient></defs><rect width="300" height="400" fill="url(#tdg)"/><circle cx="220" cy="120" r="30" fill="#fbefd6"/><path d="M0 260C80 220 140 280 300 240V400H0Z" fill="#c98a5a"/><path d="M0 320C100 280 180 350 300 300V400H0Z" fill="#a8693f"/><path d="M0 370C90 340 200 390 300 355V400H0Z" fill="#7c4a2c"/></symbol><symbol id="tc" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fb0a5"/><stop offset="1" stop-color="#e4e8e1"/></linearGradient></defs><rect width="300" height="400" fill="url(#tcg)"/><path d="M0 400L25 230L50 400ZM40 400L70 210L100 400ZM90 400L120 240L150 400ZM140 400L170 220L200 400ZM190 400L225 235L260 400ZM240 400L275 215L300 400Z" fill="#7f958b" opacity=".6"/><rect y="260" width="300" height="60" fill="#fff" opacity=".2"/><path d="M-10 400L30 280L70 400ZM60 400L110 260L160 400ZM150 400L205 285L260 400ZM230 400L285 270L330 400Z" fill="#2f453b"/></symbol><symbol id="te" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="teg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e2a3a"/><stop offset="1" stop-color="#4a5d73"/></linearGradient></defs><rect width="300" height="400" fill="url(#teg)"/><circle cx="90" cy="120" r="44" fill="#efe9d8" opacity=".12"/><circle cx="90" cy="120" r="22" fill="#efe9d8"/><circle cx="210" cy="70" r="1.5" fill="#fff"/><circle cx="250" cy="130" r="1.2" fill="#fff"/><circle cx="170" cy="40" r="1.2" fill="#fff"/><path d="M0 280C90 230 180 300 300 250V400H0Z" fill="#26384a"/><path d="M0 340C110 300 190 360 300 320V400H0Z" fill="#17232f"/></symbol><symbol id="ta" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9c7b8"/><stop offset="1" stop-color="#8fa3b5"/></linearGradient></defs><rect width="300" height="400" fill="url(#tag)"/><circle cx="210" cy="150" r="34" fill="#f3e4cf" opacity=".9"/><path d="M0 260L70 190L120 240L190 160L300 270V400H0Z" fill="#6d8195" opacity=".55"/><path d="M0 310L90 240L150 290L230 220L300 300V400H0Z" fill="#4d6074" opacity=".8"/><path d="M0 370L100 320L200 360L300 330V400H0Z" fill="#2f3f4f"/><rect y="250" width="300" height="60" fill="#fff" opacity=".12"/></symbol><symbol id="tf" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tfg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4d9cf"/><stop offset="1" stop-color="#c4cfdc"/></linearGradient></defs><rect width="300" height="400" fill="url(#tfg)"/><circle cx="150" cy="238" r="40" fill="#f9e6d2"/><rect y="240" width="300" height="160" fill="#7f9db5"/><path d="M110 262h80M125 282h50M95 306h110" stroke="#f9e6d2" stroke-opacity=".55" stroke-width="2"/></symbol><symbol id="tp" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tpg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cdbfb2"/><stop offset="1" stop-color="#8fa3b5"/></linearGradient></defs><rect width="1200" height="200" fill="url(#tpg)"/><circle cx="820" cy="80" r="34" fill="#f3e4cf" opacity=".85"/><path d="M0 150L180 70L300 120L470 50L640 130L800 90L1000 140L1200 80V200H0Z" fill="#6d8195" opacity=".6"/><path d="M0 185L200 120L380 160L560 110L760 170L980 125L1200 170V200H0Z" fill="#3f5266"/><rect y="120" width="1200" height="40" fill="#fff" opacity=".1"/></symbol></defs></svg>
+<header class="bar"><div class="logo">Memoir</div><nav class="nav">
+<button type="button" class="nv">Upload</button>
+<button type="button" class="nv on">Timeline</button>
+<button type="button" class="nv">Needs review 73</button>
+<button type="button" class="nv">Duplicates 184</button>
+</nav><button type="button" class="btn">Export</button></header>
+<div class="eye" style="margin-top:48px">02 · Chronology</div>
+<div style="position:relative;height:190px;overflow:hidden;margin-top:28px"><svg class="s pan" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#tp" width="1200" height="200"/></svg><div class="sun" style="left:calc(68% - 70px);top:6px"></div><div class="mist" style="bottom:10%"></div><div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 28px 22px"><h1 style="margin:0;font-size:72px;color:#fff">Timeline</h1><div class="serif" style="font-style:italic;font-size:20px;color:#fff">A quiet record of every day.</div></div></div>
+<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:30px 0"><input class="fld" aria-label="Search files" placeholder="Search files" style="width:240px"><button type="button" class="chip">Type</button><button type="button" class="chip">Format</button><button type="button" class="chip">Source</button><button type="button" class="chip on">All items</button></div>
+<div class="hr"></div>
+<div style="display:grid;grid-template-columns:1fr 70px;gap:40px;padding-top:30px">
+<div>
+<div style="display:flex;align-items:baseline;gap:18px;margin-bottom:16px"><span class="serif" style="font-size:34px">14 March 2024</span><span class="m">6 items</span></div>
+<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:36px">
+<div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#tb" width="300" height="400"/></svg><i>JPG</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#td" width="300" height="400"/></svg><i>HEIC</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#tc" width="300" height="400"/></svg><i>MP4</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#te" width="300" height="400"/></svg><i>DNG</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#ta" width="300" height="400"/></svg><i>LIVE</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#tf" width="300" height="400"/></svg><i>MKV</i><b>REVIEW</b></div>
+</div>
+<div style="display:flex;align-items:baseline;gap:18px;margin-bottom:16px"><span class="serif" style="font-size:34px">13 March 2024</span><span class="m">6 items</span></div>
+<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:14px">
+<div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#td" width="300" height="400"/></svg><i>HEIC</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#tb" width="300" height="400"/></svg><i>JPG</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#ta" width="300" height="400"/></svg><i>MOV</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#te" width="300" height="400"/></svg><i>CR3</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#tc" width="300" height="400"/></svg><i>PNG</i></div><div class="t"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#tf" width="300" height="400"/></svg><i>WEBP</i><b>REVIEW</b></div>
+</div>
+</div>
+<aside class="serif" style="display:flex;flex-direction:column;gap:18px;font-size:20px;text-align:right"><span style="color:#c8b07a">2024</span><span class="m">2023</span><span class="m">2022</span><span class="m">2021</span></aside>
+</div>
+</div>
+
+</body>
+</html>

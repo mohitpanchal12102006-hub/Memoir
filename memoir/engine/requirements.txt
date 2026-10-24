@@ -1,0 +1,5 @@
+fastapi>=0.110
+uvicorn>=0.27
+pillow>=10.0
+pillow-heif>=0.16
+psutil>=5.9

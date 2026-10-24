@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Manrope,system-ui,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{display:flex;min-height:800px;background:#e0e5ec;color:#2d3748;font-size:15px}
+.side{width:220px;flex:none;padding:28px 20px;display:flex;flex-direction:column;gap:12px}
+.logo{font-weight:800;font-size:24px;padding:0 10px 16px}
+.nav{display:flex;justify-content:space-between;padding:14px 16px;border-radius:16px;font-weight:600}
+.on{box-shadow:inset 5px 5px 10px #a3b1c6,inset -5px -5px 10px #fff;color:#2a49b8}
+.main{flex:1;min-width:0;padding:28px 32px;display:flex;flex-direction:column;gap:22px}
+.top{display:flex;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:28px;font-weight:800}
+.r{border-radius:20px;box-shadow:8px 8px 16px #a3b1c6,-8px -8px 16px #fff}
+.i{border-radius:20px;box-shadow:inset 6px 6px 12px #a3b1c6,inset -6px -6px 12px #fff}
+.btn{padding:12px 22px;border-radius:14px;font-weight:700;box-shadow:5px 5px 10px #a3b1c6,-5px -5px 10px #fff}
+.pri{color:#2a49b8}
+.m{color:#586577}
+.chip{padding:8px 14px;border-radius:12px;font-weight:600;font-size:13px;box-shadow:3px 3px 6px #a3b1c6,-3px -3px 6px #fff}
+.chip.on{box-shadow:inset 3px 3px 6px #a3b1c6,inset -3px -3px 6px #fff}
+.t{position:relative;aspect-ratio:1;border-radius:14px}
+.t i{position:absolute;left:8px;bottom:8px;font-style:normal;font-size:11px;font-weight:700;padding:3px 8px;border-radius:8px;background:#e0e5ec}
+.t b{position:absolute;right:8px;top:8px;font-size:11px;padding:3px 8px;border-radius:8px;background:#b03a2e;color:#fff}
+.p1{background:linear-gradient(135deg,#8fa6bd,#c6d3e0)}
+.p2{background:linear-gradient(135deg,#b7a99a,#e0d3c4)}
+.p3{background:linear-gradient(135deg,#8db3a6,#cfe3da)}
+.p4{background:linear-gradient(135deg,#a79bb8,#d9d0e6)}
+.p5{background:linear-gradient(135deg,#b8a0a0,#e6d2d2)}
+.p6{background:linear-gradient(135deg,#9aa7a0,#d3dcd7)}
+.field{border:0;background:#e0e5ec;font:inherit;color:inherit;padding:12px 16px;border-radius:14px;box-shadow:inset 4px 4px 8px #a3b1c6,inset -4px -4px 8px #fff}
+</style>
+
+<div class="app">
+<nav class="side"><div class="logo">Memoir</div>
+<button type="button" class="nav">Upload</button>
+<button type="button" class="nav on">Timeline</button>
+<button type="button" class="nav">Needs Review<b>73</b></button>
+<button type="button" class="nav">Duplicates<b>184</b></button>
+</nav>
+<main class="main">
+<div class="top"><h1>Timeline</h1><button type="button" class="btn pri">Export</button></div>
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><input class="field" aria-label="Search files" placeholder="Search files" style="width:260px"><button type="button" class="chip">Type</button><button type="button" class="chip">Format</button><button type="button" class="chip">Source</button><button type="button" class="chip on">Needs review only: off</button></div>
+<div style="display:flex;gap:22px;flex:1">
+<div class="i" style="flex:1;padding:24px;min-width:0">
+<div style="display:flex;justify-content:space-between;font-weight:800;margin-bottom:12px">14 Mar 2024<span class="m" style="font-weight:600">6 items</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:14px;margin-bottom:26px">
+<div class="t p1"><i>JPG</i></div><div class="t p2"><i>HEIC</i></div><div class="t p3"><i>MP4</i></div><div class="t p4"><i>DNG</i></div><div class="t p5"><i>LIVE</i></div><div class="t p6"><i>MKV</i><b>Review</b></div>
+</div>
+<div style="display:flex;justify-content:space-between;font-weight:800;margin-bottom:12px">13 Mar 2024<span class="m" style="font-weight:600">6 items</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:14px">
+<div class="t p2"><i>HEIC</i></div><div class="t p1"><i>JPG</i></div><div class="t p5"><i>MOV</i></div><div class="t p4"><i>CR3</i></div><div class="t p3"><i>PNG</i></div><div class="t p6"><i>WEBP</i><b>Review</b></div>
+</div>
+</div>
+<aside class="r" style="width:84px;padding:20px 8px;display:flex;flex-direction:column;gap:16px;align-items:center;font-weight:700;font-size:13px;align-self:flex-start">
+<span class="chip on">2024</span><span>Dec</span><span>Nov</span><span>Oct</span><span class="m">...</span><span class="chip">2023</span><span class="chip">2022</span>
+</aside>
+</div>
+</main>
+</div>
+
+</body>
+</html>

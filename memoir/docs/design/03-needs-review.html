@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Memoir: Needs review, luxury</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Jost,system-ui,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{min-height:900px;background:#111110;color:#ece8df;font-size:14px;padding:0 64px 56px;box-sizing:border-box}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:30px 0;border-bottom:1px solid #2a2926}
+.logo{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;letter-spacing:.04em}
+.nav{display:flex;gap:40px}
+.nv{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9b968c;padding:6px 0;border-bottom:1px solid transparent}
+.nv.on{color:#ece8df;border-bottom-color:#c8b07a}
+.serif{font-family:'Cormorant Garamond',serif}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:68px;line-height:1;margin:48px 0 10px;letter-spacing:-.01em}
+.eye{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#c8b07a}
+.m{color:#9b968c}
+.hr{border-top:1px solid #2a2926}
+.btn{font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:14px 28px;border:1px solid #4a4740}
+.pri{background:#c8b07a;color:#111110;border-color:#c8b07a}
+.chip{font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:7px 14px;border:1px solid #2a2926;color:#9b968c}
+.chip.on{color:#ece8df;border-color:#c8b07a}
+.fld{background:none;border:0;border-bottom:1px solid #4a4740;color:#ece8df;font:inherit;padding:8px 2px}
+.t{position:relative;aspect-ratio:3/4}
+.t i{position:absolute;left:8px;bottom:8px;font-style:normal;font-size:10px;letter-spacing:.16em;padding:3px 7px;background:#111110cc}
+.t b{position:absolute;right:8px;top:8px;font-size:10px;letter-spacing:.16em;padding:3px 7px;background:#111110;color:#c8b07a}
+.q1{background:linear-gradient(160deg,#2c3540,#4a5766)}
+.q2{background:linear-gradient(160deg,#3a3028,#6b5844)}
+.q3{background:linear-gradient(160deg,#26352f,#47634f)}
+.q4{background:linear-gradient(160deg,#322b3a,#58496b)}
+.q5{background:linear-gradient(160deg,#3b2b2b,#6b4a4a)}
+.q6{background:linear-gradient(160deg,#2d3330,#55605a)}
+input[type=checkbox]{accent-color:#c8b07a}
+.app{position:relative;overflow:hidden}
+.app::before{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.app::after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;background:radial-gradient(ellipse at center,transparent 60%,#0009 100%)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes sway{0%,100%{transform:scale(1.04) translateX(0)}50%{transform:scale(1.1) translateX(-2%)}}
+@keyframes drift{from{transform:translateX(-8%)}to{transform:translateX(8%)}}
+@keyframes glow{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes shim{from{background-position:0 0}to{background-position:200% 0}}
+@keyframes grow{from{width:0}to{width:80%}}
+@keyframes bird{from{transform:translate(-40px,24px)}to{transform:translate(560px,-34px)}}
+.app>*{animation:up 1s cubic-bezier(.2,.7,.2,1) both}
+.app>:nth-child(3){animation-delay:.1s}.app>:nth-child(4){animation-delay:.2s}.app>:nth-child(5){animation-delay:.3s}.app>:nth-child(6){animation-delay:.4s}.app>:nth-child(7){animation-delay:.5s}.app>:nth-child(8){animation-delay:.6s}
+.t{overflow:hidden;transition:transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .7s}
+.t .s{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.t:hover{transform:translateY(-6px);box-shadow:0 22px 44px #000b}
+.t:hover .s{transform:scale(1.14)}
+.t::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,#ffffff2e 50%,transparent 60%);transform:translateX(-110%);transition:transform 1.1s}
+.t:hover::after{transform:translateX(110%)}
+.nv{position:relative;transition:color .4s}
+.nv:hover{color:#ece8df}
+.nv::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#c8b07a;transform:scaleX(0);transition:transform .5s}
+.nv:hover::after,.nv.on::after{transform:scaleX(1)}
+.btn,.chip{transition:all .5s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{background:#c8b07a;color:#111110;border-color:#c8b07a;letter-spacing:.24em}
+.pri:hover{background:transparent;color:#c8b07a}
+.chip:hover{color:#ece8df;border-color:#c8b07a}
+tr.hr:hover{background:#ffffff0a}
+.fill{height:3px;width:80%;background:linear-gradient(90deg,#c8b07a,#f3e4cf,#c8b07a);background-size:200% 100%;animation:grow 2.6s ease-out both,shim 3s linear infinite}
+.rule{height:1px;width:140px;background:#c8b07a;margin:0 0 22px;transform-origin:left;animation:draw 1.6s .7s cubic-bezier(.2,.7,.2,1) both}
+.pan{animation:sway 22s ease-in-out infinite}
+.sun{position:absolute;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,#fff3dcb0,transparent 70%);animation:glow 6s ease-in-out infinite}
+.mist{position:absolute;left:-20%;right:-20%;bottom:18%;height:38%;background:linear-gradient(90deg,transparent,#ffffff44,transparent);filter:blur(16px);animation:drift 15s ease-in-out infinite alternate}
+.bird{position:absolute;left:0;opacity:.85;animation:bird 17s linear infinite}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.s{position:absolute;inset:0;width:100%;height:100%}
+
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes rot{to{--a:360deg}}
+@keyframes wipe{from{clip-path:inset(-10% 100% -10% 0)}to{clip-path:inset(-10% -2% -10% 0)}}
+@keyframes type{to{width:41ch}}
+@keyframes blink{50%{opacity:0}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes pulse{50%{opacity:.3}}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(22px)}}
+h1{animation:wipe 1.3s cubic-bezier(.7,0,.2,1) .3s both}
+.num{position:absolute;right:56px;top:108px;z-index:1;pointer-events:none;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:230px;line-height:1;color:transparent;-webkit-text-stroke:1px #c8b07a88;animation:float 9s ease-in-out infinite alternate}
+.btn{background-image:linear-gradient(#c8b07a,#c8b07a);background-repeat:no-repeat;background-position:0 100%;background-size:0 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .4s,border-color .4s,letter-spacing .5s}
+.btn:hover{background-color:transparent;background-size:100% 100%;color:#111110;border-color:#c8b07a}
+.btn.pri:hover{background-image:none;background-color:transparent;color:#c8b07a}
+.term{margin-top:16px;display:inline-block;padding:14px 18px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#ece8df;border:1px solid transparent;background:linear-gradient(#111110,#111110) padding-box,conic-gradient(from var(--a),#c8b07a,#c8b07a00 25%,#c8b07a00 75%,#c8b07a) border-box;animation:rot 6s linear infinite}
+.typ{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;width:0;animation:type 3.2s steps(41) .9s forwards}
+.cur{display:inline-block;width:8px;height:16px;background:#c8b07a;margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+.tick{overflow:hidden;border-top:1px solid #2a2926;border-bottom:1px solid #2a2926;padding:14px 0;margin-top:8px}
+.trk{display:flex;width:max-content;animation:marq 30s linear infinite}
+.trk span{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.24em;color:#9b968c;padding-right:48px}
+.trk span:nth-child(3n){color:#c8b07a}
+.sg{flex:1;height:14px;border:1px solid #4a4740}
+.ok{background:#c8b07a;border-color:#c8b07a}.go{background:#f3e4cf;border-color:#f3e4cf;animation:pulse 1.2s infinite}.miss{border-color:#e8907f;background:repeating-linear-gradient(45deg,#e8907f 0 3px,transparent 3px 6px)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.typ{width:41ch}}
+</style>
+
+<div class="app">
+<div class="num" aria-hidden="true">03</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="rb" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="rbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b7c6d3"/><stop offset="1" stop-color="#ecdcc8"/></linearGradient></defs><rect width="300" height="400" fill="url(#rbg)"/><path d="M0 215L60 170L110 205L170 150L240 200L300 175V215H0Z" fill="#7b8fa0"/><rect y="215" width="300" height="185" fill="#a9b9c4"/><path d="M0 215L60 260L110 225L170 280L240 230L300 255V215Z" fill="#6f8393" opacity=".5"/><path d="M20 300h80M150 330h110M60 360h90" stroke="#fff" stroke-opacity=".35" stroke-width="2"/></symbol><symbol id="rd" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="rdg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3dfc0"/><stop offset="1" stop-color="#dba776"/></linearGradient></defs><rect width="300" height="400" fill="url(#rdg)"/><circle cx="220" cy="120" r="30" fill="#fbefd6"/><path d="M0 260C80 220 140 280 300 240V400H0Z" fill="#c98a5a"/><path d="M0 320C100 280 180 350 300 300V400H0Z" fill="#a8693f"/><path d="M0 370C90 340 200 390 300 355V400H0Z" fill="#7c4a2c"/></symbol><symbol id="rc" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="rcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fb0a5"/><stop offset="1" stop-color="#e4e8e1"/></linearGradient></defs><rect width="300" height="400" fill="url(#rcg)"/><path d="M0 400L25 230L50 400ZM40 400L70 210L100 400ZM90 400L120 240L150 400ZM140 400L170 220L200 400ZM190 400L225 235L260 400ZM240 400L275 215L300 400Z" fill="#7f958b" opacity=".6"/><rect y="260" width="300" height="60" fill="#fff" opacity=".2"/><path d="M-10 400L30 280L70 400ZM60 400L110 260L160 400ZM150 400L205 285L260 400ZM230 400L285 270L330 400Z" fill="#2f453b"/></symbol><symbol id="re" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="reg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e2a3a"/><stop offset="1" stop-color="#4a5d73"/></linearGradient></defs><rect width="300" height="400" fill="url(#reg)"/><circle cx="90" cy="120" r="44" fill="#efe9d8" opacity=".12"/><circle cx="90" cy="120" r="22" fill="#efe9d8"/><circle cx="210" cy="70" r="1.5" fill="#fff"/><circle cx="250" cy="130" r="1.2" fill="#fff"/><circle cx="170" cy="40" r="1.2" fill="#fff"/><path d="M0 280C90 230 180 300 300 250V400H0Z" fill="#26384a"/><path d="M0 340C110 300 190 360 300 320V400H0Z" fill="#17232f"/></symbol></defs></svg>
+<header class="bar"><div class="logo">Memoir</div><nav class="nav">
+<button type="button" class="nv">Upload</button>
+<button type="button" class="nv">Timeline</button>
+<button type="button" class="nv on">Needs review 73</button>
+<button type="button" class="nv">Duplicates 184</button>
+</nav><button type="button" class="btn">Export</button></header>
+<div class="eye" style="margin-top:48px">03 · Attention</div>
+<h1 style="margin-top:20px">Needs review</h1>
+<div style="display:grid;grid-template-columns:320px 1fr;gap:64px;margin-top:28px">
+<section>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px"><span class="chip on">All 73</span><span class="chip">Missing</span><span class="chip">Mismatch</span><span class="chip">Corrupt</span></div>
+<div class="hr" style="padding:16px 0;display:flex;gap:12px"><input type="checkbox" aria-label="Select IMG-20230514-WA0031.jpg" checked><div><div class="serif" style="font-size:21px;color:#c8b07a">IMG-20230514-WA0031.jpg</div><div class="m">No embedded date</div></div></div>
+<div class="hr" style="padding:16px 0;display:flex;gap:12px"><input type="checkbox" aria-label="Select 00231.mkv"><div><div class="serif" style="font-size:21px">00231.mkv</div><div class="m">EXIF and JSON differ</div></div></div>
+<div class="hr" style="padding:16px 0;display:flex;gap:12px"><input type="checkbox" aria-label="Select DSC0412.NEF" checked><div><div class="serif" style="font-size:21px">DSC0412.NEF</div><div class="m">Placeholder date 1970</div></div></div>
+<div class="hr" style="padding:16px 0;display:flex;gap:12px"><input type="checkbox" aria-label="Select VID-20230601-WA0009.mp4"><div><div class="serif" style="font-size:21px">VID-20230601-WA0009.mp4</div><div class="m">Forward date</div></div></div>
+<button type="button" class="btn" style="margin-top:20px">Batch edit (2 selected)</button>
+</section>
+<section>
+<div class="serif" style="font-size:38px;font-weight:300;margin-bottom:22px">IMG-20230514-WA0031.jpg</div>
+<div style="display:flex;gap:40px;margin-bottom:28px">
+<div style="width:380px;height:260px;flex:none;position:relative;overflow:hidden"><svg class="s pan" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#rb" width="300" height="400"/></svg><span class="eye" style="position:absolute;left:12px;bottom:12px;background:#111110cc;padding:3px 8px">Preview in memory only</span></div>
+<div><div class="eye">Clues</div><div class="m" style="margin:12px 0 6px">Filename suggests 14 May 2023</div><div class="m">Folder: Goa trip</div><div style="display:flex;gap:8px;margin-top:16px"><div class="t" style="width:40px"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#rd" width="300" height="400"/></svg></div><div class="t" style="width:40px"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#rc" width="300" height="400"/></svg></div><div class="t" style="width:40px;outline:1px solid #c8b07a;outline-offset:3px"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#rb" width="300" height="400"/></svg></div><div class="t" style="width:40px"><svg class="s" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#re" width="300" height="400"/></svg></div></div></div>
+</div>
+<table style="width:100%;border-collapse:collapse;text-align:left;margin-bottom:28px"><tr class="eye m"><th style="padding:10px 0;font-weight:500">Source</th><th>Value</th><th>Offset</th><th></th></tr>
+<tr class="hr"><td style="padding:14px 0">EXIF</td><td class="m">none</td><td class="m">-</td><td></td></tr>
+<tr class="hr"><td style="padding:14px 0">Sidecar JSON</td><td>14 May 2023, 11:02</td><td class="m">UTC</td><td><button type="button" class="chip on">Use</button></td></tr>
+<tr class="hr"><td style="padding:14px 0">Filename</td><td>14 May 2023, time unknown</td><td class="m">-</td><td><button type="button" class="chip on">Use</button></td></tr></table>
+<div style="display:flex;gap:24px;margin-bottom:28px"><input class="fld" aria-label="Date" value="14/05/2023" style="width:120px"><input class="fld" aria-label="Time" value="11:02:00" style="width:100px"><input class="fld" aria-label="Timezone offset" value="UTC+05:30" style="width:120px"></div>
+<div style="display:flex;gap:16px"><button type="button" class="btn pri">Apply</button><button type="button" class="btn">Skip</button><button type="button" class="btn">Undo</button></div>
+</section>
+</div>
+</div>
+
+</body>
+</html>
